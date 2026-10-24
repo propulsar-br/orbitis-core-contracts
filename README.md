@@ -2,6 +2,10 @@
 
 Interfaces e DTOs que o core do Orbitis expõe a módulos e apps. **Sem implementação, sem lógica de negócio.**
 
+## Por que é público
+
+Só interfaces e DTOs — nenhuma regra de negócio, nenhum dado. Quem desenvolve um app satélite precisa consultá-lo, e ser público elimina a necessidade de distribuir credencial para isso. O core do Orbitis, que tem as regras, permanece privado.
+
 ## Por que é um repositório separado
 
 Para ter semver independente do core. Se vivesse dentro do core, cada release do core seria uma release do contrato na prática — e a promessa de compatibilidade com apps de terceiros não teria como ser cumprida.
